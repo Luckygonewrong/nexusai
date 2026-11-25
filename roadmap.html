@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roadmap | NexusAI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/roadmap.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js" defer></script>
+</head>
+<body>
+
+  <!-- navbar -->
+  <header class="navbar" id="navbar">
+    <a href="index.html" class="logo"><span class="logo-icon"><i class="fa-solid fa-microchip"></i></span>Nexus<span>AI</span></a>
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="components.html">Components</a></li>
+        <li><a href="roadmap.html" class="active">Roadmap</a></li>
+        <li><a href="team.html">Team</a></li>
+      </ul>
+    </nav>
+    <div class="nav-right">
+      <button class="icon-btn" id="themeBtn" title="Change theme"><i class="fa-solid fa-sun"></i></button>
+      <button class="icon-btn menu-btn" id="menuBtn" title="Menu"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </header>
+
+  <section class="page-head">
+    <p class="tag">Enterprise Roadmap</p>
+    <h1>Where NexusAI is going</h1>
+    <p>Four phases from a simple dashboard to distributed enterprise hubs. Tick tasks to update progress.</p>
+  </section>
+
+  <!-- roadmap -->
+  <section class="section">
+    <div class="card progress-box">
+      <div class="p-top"><span id="pText"></span><span id="pPercent"></span></div>
+      <div class="p-bar"><div class="p-fill" id="pFill"></div></div>
+    </div>
+
+    <div class="phases" id="phases"></div>
+  </section>
+
+  <section class="section reveal">
+    <h2 class="title">Development Timeline</h2>
+    <p class="sub">How our team is building this project in 6 weeks.</p>
+    <div class="weeks">
+      <div class="week"><span>WEEK 1&ndash;2</span><h4>Planning &amp; Layout</h4><p>Requirement analysis, wireframes and HTML/CSS structure.</p></div>
+      <div class="week"><span>WEEK 3&ndash;4</span><h4>JavaScript</h4><p>Telemetry simulator and the component filter gallery.</p></div>
+      <div class="week"><span>WEEK 5</span><h4>Testing</h4><p>Responsive testing on phone, tablet and laptop. Bug fixing.</p></div>
+      <div class="week"><span>WEEK 6</span><h4>Final Submission</h4><p>Documentation, report and presentation.</p></div>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div>
+        <a href="index.html" class="logo"><span class="logo-icon"><i class="fa-solid fa-microchip"></i></span>Nexus<span>AI</span></a>
+        <p>Real-time edge AI monitoring, built with HTML, CSS and JavaScript.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Pages</h4>
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="components.html">Components</a>
+        <a href="roadmap.html">Roadmap</a>
+        <a href="team.html">Team</a>
+      </div>
+      <div>
+        <h4>Project</h4>
+        <p>Web Development Mini-Project</p>
+        <p>B.Tech CSE, Semester 1</p>
+      </div>
+    </div>
+    <p class="copy">&copy; 2026 NexusAI. Made by Team NexusAI.</p>
+  </footer>
+
+  <button class="top-btn" id="topBtn" title="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+  <div class="toast" id="toast"></div>
+
+  <script src="js/main.js"></script>
+  <script src="js/roadmap.js"></script>
+</body>
+</html>

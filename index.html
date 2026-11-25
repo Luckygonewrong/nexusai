@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edge AI Telemetry | NexusAI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/home.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js" defer></script>
+</head>
+<body>
+
+  <!-- navbar -->
+  <header class="navbar" id="navbar">
+    <a href="index.html" class="logo"><span class="logo-icon"><i class="fa-solid fa-microchip"></i></span>Nexus<span>AI</span></a>
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="components.html">Components</a></li>
+        <li><a href="roadmap.html">Roadmap</a></li>
+        <li><a href="team.html">Team</a></li>
+      </ul>
+    </nav>
+    <div class="nav-right">
+      <button class="icon-btn" id="themeBtn" title="Change theme"><i class="fa-solid fa-sun"></i></button>
+      <button class="icon-btn menu-btn" id="menuBtn" title="Menu"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </header>
+
+  <!-- hero -->
+  <section class="hero">
+    <div class="hero-left">
+      <p class="tag">Edge AI &bull; IoT &bull; Robotics</p>
+      <h1>Monitor every machine <br><span class="typed" id="typed"></span><span class="cursor">|</span></h1>
+      <p class="hero-text">NexusAI is a lightweight web dashboard that shows live data from AI chips and robot controllers, all on one clean screen.</p>
+      <div class="hero-btns">
+        <a href="dashboard.html" class="btn">Open Dashboard <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="components.html" class="btn btn-outline">Explore Components</a>
+      </div>
+    </div>
+
+    <div class="card hero-card">
+      <div class="hc-top">
+        <b><span class="hc-icon"><i class="fa-solid fa-microchip"></i></span> Node A</b>
+        <span class="online"><span class="dot"></span> Online</span>
+      </div>
+      <p class="hc-label">Throughput</p>
+      <h2><span id="heroSpeed">480</span> <small>MB/s</small></h2>
+      <div class="mini-bars" id="miniBars"></div>
+      <div class="hc-row">
+        <div><small>Latency</small><b id="heroDelay">14 ms</b></div>
+        <div><small>Load</small><b id="heroLoad">46%</b></div>
+        <div><small>Temp</small><b id="heroTemp">52°C</b></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="counters reveal">
+    <div class="counter"><h2 data-target="12">0</h2><p>Edge nodes</p></div>
+    <div class="counter"><h2 data-target="8">0</h2><p>Components</p></div>
+    <div class="counter"><h2 data-target="4">0</h2><p>Growth phases</p></div>
+    <div class="counter"><h2 data-target="99" data-suffix="%">0</h2><p>Uptime goal</p></div>
+  </section>
+
+  <section class="section reveal">
+    <h2 class="title">What you can do</h2>
+    <p class="sub">Three tools, one platform. Click any card to open it.</p>
+    <div class="features">
+      <a href="dashboard.html" class="card feature">
+        <div class="f-icon"><i class="fa-solid fa-chart-line"></i></div>
+        <h3>Live Dashboard</h3>
+        <p>Watch speed, delay and load of every node change every second. Turn nodes on or off and test load spikes.</p>
+        <span class="more">Open dashboard &rarr;</span>
+      </a>
+      <a href="components.html" class="card feature">
+        <div class="f-icon"><i class="fa-solid fa-robot"></i></div>
+        <h3>Component Gallery</h3>
+        <p>Browse AI chips, robot controllers and sensors. Search, filter, sort and save your favourites.</p>
+        <span class="more">View components &rarr;</span>
+      </a>
+      <a href="roadmap.html" class="card feature">
+        <div class="f-icon"><i class="fa-solid fa-road"></i></div>
+        <h3>Roadmap</h3>
+        <p>See how NexusAI grows from a simple dashboard to enterprise hubs, and track progress task by task.</p>
+        <span class="more">See roadmap &rarr;</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="cta reveal">
+    <h2>Ready to see it live?</h2>
+    <p>Open the dashboard and hit the Load Spike button.</p>
+    <a href="dashboard.html" class="btn">Let's go <i class="fa-solid fa-bolt"></i></a>
+  </section>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div>
+        <a href="index.html" class="logo"><span class="logo-icon"><i class="fa-solid fa-microchip"></i></span>Nexus<span>AI</span></a>
+        <p>Real-time edge AI monitoring, built with HTML, CSS and JavaScript.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Pages</h4>
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="components.html">Components</a>
+        <a href="roadmap.html">Roadmap</a>
+        <a href="team.html">Team</a>
+      </div>
+      <div>
+        <h4>Project</h4>
+        <p>Web Development Mini-Project</p>
+        <p>B.Tech CSE, Semester 1</p>
+      </div>
+    </div>
+    <p class="copy">&copy; 2026 NexusAI. Made by Team NexusAI.</p>
+  </footer>
+
+  <button class="top-btn" id="topBtn" title="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+  <div class="toast" id="toast"></div>
+
+  <script src="js/main.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

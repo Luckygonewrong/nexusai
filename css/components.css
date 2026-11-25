@@ -1,0 +1,259 @@
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 18px;
+}
+
+.search {
+  position: relative;
+  flex: 1;
+  min-width: 220px;
+  max-width: 340px;
+}
+
+.s-ic {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  display: flex;
+  transform: translateY(-50%);
+  color: var(--muted);
+}
+
+.search input {
+  width: 100%;
+  padding-left: 44px;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.filter {
+  padding: 9px 20px;
+  border-radius: 30px;
+  border: 2px solid var(--line);
+  background: transparent;
+  color: var(--text);
+  font-family: inherit;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.filter:hover {
+  border-color: var(--accent-ink);
+  color: var(--accent-ink);
+}
+
+.filter.active {
+  background: var(--accent);
+  border-color: var(--accent-ink);
+  color: var(--on-accent);
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.fav-count {
+  color: var(--accent-ink);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.item {
+  position: relative;
+  cursor: pointer;
+  animation: fadeUp 0.5s;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.25);
+}
+
+.i-icon {
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 15px;
+  border-radius: 16px;
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+  font-size: 1.5rem;
+  transition: 0.3s;
+}
+
+.item:hover .i-icon {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+
+.pill {
+  display: inline-block;
+  margin-bottom: 8px;
+  padding: 3px 12px;
+  border-radius: 20px;
+  background: var(--text);
+  color: var(--bg);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.item p {
+  opacity: 0.75;
+  font-size: 0.95rem;
+}
+
+.item-foot {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.item-foot span:last-child {
+  color: var(--accent-ink);
+}
+
+.fav {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--muted);
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.fav:hover {
+  transform: scale(1.15);
+}
+
+.fav.on {
+  background: var(--accent);
+  color: var(--on-accent);
+  animation: pop 0.3s;
+}
+
+.empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 50px;
+  color: var(--muted);
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 70;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+}
+
+.overlay.show {
+  display: flex;
+}
+
+.modal {
+  position: relative;
+  width: 100%;
+  max-width: 460px;
+  padding: 35px;
+  animation: popIn 0.3s;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--text);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.close:hover {
+  background: var(--accent);
+  color: var(--on-accent);
+  transform: rotate(90deg);
+}
+
+.specs {
+  list-style: none;
+  margin-top: 18px;
+}
+
+.specs li {
+  display: flex;
+  justify-content: space-between;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.specs b {
+  color: var(--accent-ink);
+}
+
+.m-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 22px;
+  font-size: 0.9rem;
+}
+
+@keyframes pop {
+  50% { transform: scale(1.3); }
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .search,
+  .toolbar select {
+    max-width: none;
+    width: 100%;
+  }
+}

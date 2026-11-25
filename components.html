@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Components | NexusAI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js" defer></script>
+</head>
+<body>
+
+  <!-- navbar -->
+  <header class="navbar" id="navbar">
+    <a href="index.html" class="logo"><span class="logo-icon"><i class="fa-solid fa-microchip"></i></span>Nexus<span>AI</span></a>
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="components.html" class="active">Components</a></li>
+        <li><a href="roadmap.html">Roadmap</a></li>
+        <li><a href="team.html">Team</a></li>
+      </ul>
+    </nav>
+    <div class="nav-right">
+      <button class="icon-btn" id="themeBtn" title="Change theme"><i class="fa-solid fa-sun"></i></button>
+      <button class="icon-btn menu-btn" id="menuBtn" title="Menu"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </header>
+
+  <section class="page-head">
+    <p class="tag">Hardware Catalog</p>
+    <h1>Component Gallery</h1>
+    <p>Edge hardware supported by NexusAI. Click a card to see full specs.</p>
+  </section>
+
+  <!-- gallery -->
+  <section class="section">
+    <div class="toolbar">
+      <div class="search">
+        <span class="s-ic"><i class="fa-solid fa-magnifying-glass"></i></span>
+        <input type="text" id="search" placeholder="Search components...">
+      </div>
+      <div class="filters">
+        <button class="filter active" data-type="all">All</button>
+        <button class="filter" data-type="npu">AI Chips</button>
+        <button class="filter" data-type="robot">Controllers</button>
+        <button class="filter" data-type="sensor">Sensors</button>
+      </div>
+      <select id="sort">
+        <option value="name">Sort: Name</option>
+        <option value="low">Sort: Power (low to high)</option>
+        <option value="high">Sort: Power (high to low)</option>
+      </select>
+    </div>
+
+    <div class="info">
+      <span id="count"></span>
+      <span class="fav-count"><i class="fa-solid fa-heart"></i> <b id="favCount">0</b> saved</span>
+    </div>
+
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <!-- popup -->
+  <div class="overlay" id="overlay">
+    <div class="card modal">
+      <button class="close" id="closeBtn"><i class="fa-solid fa-xmark"></i></button>
+      <div class="i-icon" id="mIcon"></div>
+      <span class="pill" id="mType"></span>
+      <h3 id="mName"></h3>
+      <p id="mDesc"></p>
+      <ul class="specs" id="mSpecs"></ul>
+      <div class="m-nav">
+        <button class="btn btn-outline btn-small" id="prevBtn"><i class="fa-solid fa-chevron-left"></i> Prev</button>
+        <span id="mCount"></span>
+        <button class="btn btn-small" id="nextBtn">Next <i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div>
+        <a href="index.html" class="logo"><span class="logo-icon"><i class="fa-solid fa-microchip"></i></span>Nexus<span>AI</span></a>
+        <p>Real-time edge AI monitoring, built with HTML, CSS and JavaScript.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Pages</h4>
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="components.html">Components</a>
+        <a href="roadmap.html">Roadmap</a>
+        <a href="team.html">Team</a>
+      </div>
+      <div>
+        <h4>Project</h4>
+        <p>Web Development Mini-Project</p>
+        <p>B.Tech CSE, Semester 1</p>
+      </div>
+    </div>
+    <p class="copy">&copy; 2026 NexusAI. Made by Team NexusAI.</p>
+  </footer>
+
+  <button class="top-btn" id="topBtn" title="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+  <div class="toast" id="toast"></div>
+
+  <script src="js/main.js"></script>
+  <script src="js/components.js"></script>
+</body>
+</html>

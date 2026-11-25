@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | NexusAI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js" defer></script>
+</head>
+<body>
+
+  <!-- navbar -->
+  <header class="navbar" id="navbar">
+    <a href="index.html" class="logo"><span class="logo-icon"><i class="fa-solid fa-microchip"></i></span>Nexus<span>AI</span></a>
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="dashboard.html" class="active">Dashboard</a></li>
+        <li><a href="components.html">Components</a></li>
+        <li><a href="roadmap.html">Roadmap</a></li>
+        <li><a href="team.html">Team</a></li>
+      </ul>
+    </nav>
+    <div class="nav-right">
+      <button class="icon-btn" id="themeBtn" title="Change theme"><i class="fa-solid fa-sun"></i></button>
+      <button class="icon-btn menu-btn" id="menuBtn" title="Menu"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </header>
+
+  <section class="page-head">
+    <p class="tag">Live Telemetry</p>
+    <h1>Dashboard</h1>
+    <p>Simulated real-time data from 4 edge nodes. Try the controls below.</p>
+  </section>
+
+  <!-- dashboard -->
+  <section class="section">
+    <div class="controls">
+      <button class="btn" id="pauseBtn"><i class="fa-solid fa-pause"></i> Pause</button>
+      <button class="btn btn-outline" id="spikeBtn"><i class="fa-solid fa-bolt"></i> Load Spike</button>
+      <label class="rate">Refresh
+        <select id="rate">
+          <option value="500">0.5 s</option>
+          <option value="1000" selected>1 s</option>
+          <option value="2000">2 s</option>
+        </select>
+      </label>
+      <span class="live" id="liveTag"><span class="dot"></span> LIVE</span>
+    </div>
+
+    <div class="stats">
+      <div class="card stat">
+        <div class="s-icon"><i class="fa-solid fa-gauge-high"></i></div>
+        <div><p>Throughput</p><h3 id="speed">0</h3><small>MB/s</small></div>
+      </div>
+      <div class="card stat">
+        <div class="s-icon"><i class="fa-solid fa-stopwatch"></i></div>
+        <div><p>Latency</p><h3 id="delay">0</h3><small>ms</small></div>
+      </div>
+      <div class="card stat">
+        <div class="s-icon"><i class="fa-solid fa-server"></i></div>
+        <div><p>Nodes Online</p><h3 id="online">4</h3><small>of 4</small></div>
+      </div>
+      <div class="card stat">
+        <div class="s-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+        <div><p>Alerts</p><h3 id="alerts">0</h3><small>total</small></div>
+      </div>
+    </div>
+
+    <div class="dash-row">
+      <div class="card">
+        <div class="box-head">
+          <h4>Last 20 readings</h4>
+          <div class="legend">
+            <span><i class="key key-a"></i>Throughput</span>
+            <span><i class="key key-b"></i>Latency</span>
+          </div>
+        </div>
+        <canvas id="chart"></canvas>
+      </div>
+
+      <div class="card">
+        <div class="box-head">
+          <h4>Node Load</h4>
+          <small>Use the switch to turn a node off</small>
+        </div>
+        <div id="nodes"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="box-head">
+        <h4>Event Log</h4>
+        <button class="btn btn-outline btn-small" id="clearBtn">Clear</button>
+      </div>
+      <ul class="log" id="log"></ul>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div>
+        <a href="index.html" class="logo"><span class="logo-icon"><i class="fa-solid fa-microchip"></i></span>Nexus<span>AI</span></a>
+        <p>Real-time edge AI monitoring, built with HTML, CSS and JavaScript.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Pages</h4>
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="components.html">Components</a>
+        <a href="roadmap.html">Roadmap</a>
+        <a href="team.html">Team</a>
+      </div>
+      <div>
+        <h4>Project</h4>
+        <p>Web Development Mini-Project</p>
+        <p>B.Tech CSE, Semester 1</p>
+      </div>
+    </div>
+    <p class="copy">&copy; 2026 NexusAI. Made by Team NexusAI.</p>
+  </footer>
+
+  <button class="top-btn" id="topBtn" title="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+  <div class="toast" id="toast"></div>
+
+  <script src="js/main.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

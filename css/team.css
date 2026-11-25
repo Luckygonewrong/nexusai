@@ -1,0 +1,179 @@
+.team {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.flip {
+  height: 300px;
+  perspective: 1000px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.flip:hover {
+  transform: translateY(-6px);
+}
+
+.flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.7s;
+}
+
+.flip.flipped .flip-inner {
+  transform: rotateY(180deg);
+}
+
+.face {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.face small {
+  margin-top: 14px;
+  font-size: 0.8rem;
+  opacity: 0.55;
+}
+
+.back {
+  transform: rotateY(180deg);
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: var(--on-accent);
+}
+
+.back p {
+  margin-top: 8px;
+  font-size: 0.92rem;
+}
+
+.avatar {
+  width: 90px;
+  height: 90px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 15px;
+  border-radius: 50%;
+  border: 4px solid var(--accent);
+  background: var(--text);
+  color: var(--bg);
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 14px;
+}
+
+.skills span {
+  padding: 3px 12px;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.12);
+  font-size: 0.78rem;
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  align-items: start;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.info-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.info-row small {
+  opacity: 0.6;
+}
+
+.field {
+  margin-bottom: 14px;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.char {
+  float: right;
+  font-weight: 400;
+  opacity: 0.6;
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  border-radius: 14px;
+  border-color: transparent;
+  background: var(--surface);
+  color: var(--text);
+}
+
+.form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form input:focus,
+.form textarea:focus {
+  border-color: var(--accent-ink);
+}
+
+.field.bad input,
+.field.bad textarea {
+  border-color: var(--accent-ink);
+  animation: shake 0.3s;
+}
+
+.error {
+  display: block;
+  min-height: 1.2em;
+  margin-top: 4px;
+  font-size: 0.8rem;
+  color: var(--accent-ink);
+}
+
+@keyframes shake {
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+@media (max-width: 1000px) {
+  .team {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .contact {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .team {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team | NexusAI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/team.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js" defer></script>
+</head>
+<body>
+
+  <!-- navbar -->
+  <header class="navbar" id="navbar">
+    <a href="index.html" class="logo"><span class="logo-icon"><i class="fa-solid fa-microchip"></i></span>Nexus<span>AI</span></a>
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="components.html">Components</a></li>
+        <li><a href="roadmap.html">Roadmap</a></li>
+        <li><a href="team.html" class="active">Team</a></li>
+      </ul>
+    </nav>
+    <div class="nav-right">
+      <button class="icon-btn" id="themeBtn" title="Change theme"><i class="fa-solid fa-sun"></i></button>
+      <button class="icon-btn menu-btn" id="menuBtn" title="Menu"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </header>
+
+  <section class="page-head">
+    <p class="tag">About Us</p>
+    <h1>Meet the Team</h1>
+    <p>Four first-year students who built NexusAI. Click a card to flip it.</p>
+  </section>
+
+  <!-- team -->
+  <section class="section">
+    <div class="team">
+      <div class="flip">
+        <div class="flip-inner">
+          <div class="card face">
+            <div class="avatar">M1</div>
+            <h3>Member 1</h3>
+            <p>Home Page &amp; Layout</p>
+            <small>Click to flip</small>
+          </div>
+          <div class="card face back">
+            <h3>Member 1</h3>
+            <p>Built the navbar, home page, footer and the light/dark theme.</p>
+            <div class="skills"><span>HTML</span><span>CSS</span><span>Flexbox</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="flip">
+        <div class="flip-inner">
+          <div class="card face">
+            <div class="avatar">M2</div>
+            <h3>Member 2</h3>
+            <p>Telemetry Dashboard</p>
+            <small>Click to flip</small>
+          </div>
+          <div class="card face back">
+            <h3>Member 2</h3>
+            <p>Built the live data simulator, canvas graph, node switches and event log.</p>
+            <div class="skills"><span>JavaScript</span><span>Canvas</span><span>DOM</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="flip">
+        <div class="flip-inner">
+          <div class="card face">
+            <div class="avatar">M3</div>
+            <h3>Member 3</h3>
+            <p>Component Gallery</p>
+            <small>Click to flip</small>
+          </div>
+          <div class="card face back">
+            <h3>Member 3</h3>
+            <p>Built the search, filters, sorting, favourites and the specs popup.</p>
+            <div class="skills"><span>JavaScript</span><span>Arrays</span><span>Grid</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="flip">
+        <div class="flip-inner">
+          <div class="card face">
+            <div class="avatar">M4</div>
+            <h3>Member 4</h3>
+            <p>Roadmap &amp; Testing</p>
+            <small>Click to flip</small>
+          </div>
+          <div class="card face back">
+            <h3>Member 4</h3>
+            <p>Built the roadmap page and contact form, and tested every page on mobile.</p>
+            <div class="skills"><span>CSS</span><span>Forms</span><span>Testing</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section reveal">
+    <h2 class="title">Get in Touch</h2>
+    <p class="sub">Have a question about NexusAI? Send us a message.</p>
+    <div class="contact">
+      <div class="card contact-info">
+        <h3>Contact Info</h3>
+        <div class="info-row"><div class="s-icon"><i class="fa-solid fa-location-dot"></i></div><div><small>Location</small><p>Bennett University, Greater Noida</p></div></div>
+        <div class="info-row"><div class="s-icon"><i class="fa-solid fa-envelope"></i></div><div><small>Email</small><p>team.nexusai@gmail.com</p></div></div>
+        <div class="info-row"><div class="s-icon"><i class="fa-solid fa-code"></i></div><div><small>Built with</small><p>HTML, CSS, JavaScript</p></div></div>
+      </div>
+
+      <form class="card form" id="form" novalidate>
+        <div class="field">
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Your name">
+          <span class="error" id="nameErr"></span>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="you@example.com">
+          <span class="error" id="emailErr"></span>
+        </div>
+        <div class="field">
+          <label for="msg">Message <span class="char" id="char">0/300</span></label>
+          <textarea id="msg" maxlength="300" placeholder="Write your message..."></textarea>
+          <span class="error" id="msgErr"></span>
+        </div>
+        <button type="submit" class="btn">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+      </form>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div>
+        <a href="index.html" class="logo"><span class="logo-icon"><i class="fa-solid fa-microchip"></i></span>Nexus<span>AI</span></a>
+        <p>Real-time edge AI monitoring, built with HTML, CSS and JavaScript.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Pages</h4>
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="components.html">Components</a>
+        <a href="roadmap.html">Roadmap</a>
+        <a href="team.html">Team</a>
+      </div>
+      <div>
+        <h4>Project</h4>
+        <p>Web Development Mini-Project</p>
+        <p>B.Tech CSE, Semester 1</p>
+      </div>
+    </div>
+    <p class="copy">&copy; 2026 NexusAI. Made by Team NexusAI.</p>
+  </footer>
+
+  <button class="top-btn" id="topBtn" title="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+  <div class="toast" id="toast"></div>
+
+  <script src="js/main.js"></script>
+  <script src="js/team.js"></script>
+</body>
+</html>
